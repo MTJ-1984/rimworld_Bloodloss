@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <JobDef>
+    <defName>Bloodtype_AdministerBloodPack</defName>
+    <driverClass>BloodtypeHardcore.JobDriver_AdministerBloodPack</driverClass>
+    <reportString>administering blood pack.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+    <alwaysShowWeapon>false</alwaysShowWeapon>
+  </JobDef>
+
+</Defs>

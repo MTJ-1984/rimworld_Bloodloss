@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Ludeon.RimWorld.Biotech</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+
+        <!-- Repurpose vanilla Biotech extraction operation into typed blood extraction. -->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/RecipeDef[defName="ExtractHemogenPack"]/workerClass</xpath>
+          <value>
+            <workerClass>BloodtypeHardcore.Recipe_ExtractBloodPack</workerClass>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/RecipeDef[defName="ExtractHemogenPack"]/label</xpath>
+          <value>
+            <label>extract blood pack</label>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/RecipeDef[defName="ExtractHemogenPack"]/description</xpath>
+          <value>
+            <description>Extract and store a typed blood pack from the target. This increases blood loss and cannot be safely performed on already blood-depleted patients.</description>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/RecipeDef[defName="ExtractHemogenPack"]/jobString</xpath>
+          <value>
+            <jobString>Extracting blood pack.</jobString>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="ExtractHemogenPack"]/descriptionHyperlinks</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/RecipeDef[defName="ExtractHemogenPack"]/descriptionHyperlinks</xpath>
+            <value>
+              <descriptionHyperlinks>
+                <ThingDef>BloodPack_O_Positive</ThingDef>
+                <ThingDef>BloodPack_O_Negative</ThingDef>
+              </descriptionHyperlinks>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="ExtractHemogenPack"]</xpath>
+            <value>
+              <descriptionHyperlinks>
+                <ThingDef>BloodPack_O_Positive</ThingDef>
+                <ThingDef>BloodPack_O_Negative</ThingDef>
+              </descriptionHyperlinks>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="ExtractHemogenPack"]/uiIconThing</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/RecipeDef[defName="ExtractHemogenPack"]/uiIconThing</xpath>
+            <value>
+              <uiIconThing>BloodPack_O_Positive</uiIconThing>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="ExtractHemogenPack"]</xpath>
+            <value>
+              <uiIconThing>BloodPack_O_Positive</uiIconThing>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="ExtractHemogenPack"]/ingredients</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/RecipeDef[defName="ExtractHemogenPack"]/ingredients</xpath>
+            <value>
+              <ingredients>
+                <li>
+                  <filter>
+                    <categories>
+                      <li>Medicine</li>
+                    </categories>
+                  </filter>
+                  <count>1</count>
+                </li>
+              </ingredients>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="ExtractHemogenPack"]</xpath>
+            <value>
+              <ingredients>
+                <li>
+                  <filter>
+                    <categories>
+                      <li>Medicine</li>
+                    </categories>
+                  </filter>
+                  <count>1</count>
+                </li>
+              </ingredients>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="ExtractHemogenPack"]/fixedIngredientFilter</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/RecipeDef[defName="ExtractHemogenPack"]/fixedIngredientFilter</xpath>
+            <value>
+              <fixedIngredientFilter>
+                <categories>
+                  <li>Medicine</li>
+                </categories>
+              </fixedIngredientFilter>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="ExtractHemogenPack"]</xpath>
+            <value>
+              <fixedIngredientFilter>
+                <categories>
+                  <li>Medicine</li>
+                </categories>
+              </fixedIngredientFilter>
+            </value>
+          </nomatch>
+        </li>
+
+        <!-- Repurpose vanilla Biotech transfusion operation into typed transfusion logic. -->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/RecipeDef[defName="BloodTransfusion"]/workerClass</xpath>
+          <value>
+            <workerClass>BloodtypeHardcore.Recipe_TransfuseBloodPack</workerClass>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/RecipeDef[defName="BloodTransfusion"]/description</xpath>
+          <value>
+            <description>Perform a blood transfusion using stored typed blood packs. Exact matches are safest. Compatible non-identical blood is less effective and may trigger reactions. Incompatible blood can be lethal.</description>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/RecipeDef[defName="BloodTransfusion"]/ingredients</xpath>
+          <value>
+            <ingredients>
+              <li>
+                <filter>
+                  <thingDefs>
+                    <li>BloodPack_O_Positive</li>
+                    <li>BloodPack_O_Negative</li>
+                    <li>BloodPack_A_Positive</li>
+                    <li>BloodPack_A_Negative</li>
+                    <li>BloodPack_B_Positive</li>
+                    <li>BloodPack_B_Negative</li>
+                    <li>BloodPack_AB_Positive</li>
+                    <li>BloodPack_AB_Negative</li>
+                  </thingDefs>
+                </filter>
+              </li>
+              <li>
+                <filter>
+                  <categories>
+                    <li>Medicine</li>
+                  </categories>
+                </filter>
+                <count>1</count>
+              </li>
+            </ingredients>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/RecipeDef[defName="BloodTransfusion"]/fixedIngredientFilter</xpath>
+          <value>
+            <fixedIngredientFilter>
+              <thingDefs>
+                <li>BloodPack_O_Positive</li>
+                <li>BloodPack_O_Negative</li>
+                <li>BloodPack_A_Positive</li>
+                <li>BloodPack_A_Negative</li>
+                <li>BloodPack_B_Positive</li>
+                <li>BloodPack_B_Negative</li>
+                <li>BloodPack_AB_Positive</li>
+                <li>BloodPack_AB_Negative</li>
+              </thingDefs>
+              <categories>
+                <li>Medicine</li>
+              </categories>
+            </fixedIngredientFilter>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="BloodTransfusion"]/descriptionHyperlinks</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/RecipeDef[defName="BloodTransfusion"]/descriptionHyperlinks</xpath>
+            <value>
+              <descriptionHyperlinks>
+                <ThingDef>BloodPack_O_Positive</ThingDef>
+                <HediffDef>Bloodtype_TransfusionReaction</HediffDef>
+              </descriptionHyperlinks>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="BloodTransfusion"]</xpath>
+            <value>
+              <descriptionHyperlinks>
+                <ThingDef>BloodPack_O_Positive</ThingDef>
+                <HediffDef>Bloodtype_TransfusionReaction</HediffDef>
+              </descriptionHyperlinks>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="BloodTransfusion"]/uiIconThing</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/RecipeDef[defName="BloodTransfusion"]/uiIconThing</xpath>
+            <value>
+              <uiIconThing>BloodPack_O_Positive</uiIconThing>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="BloodTransfusion"]</xpath>
+            <value>
+              <uiIconThing>BloodPack_O_Positive</uiIconThing>
+            </value>
+          </nomatch>
+        </li>
+
+        <!-- Expose crisis stabilization on baseline humans (same source list as vanilla blood ops). -->
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="Human"]/recipes/li[text()="StabilizeTransfusionCrisis"]</xpath>
+          <match Class="PatchOperationSequence">
+            <operations />
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="Human"]/recipes</xpath>
+            <value>
+              <li MayRequire="Ludeon.RimWorld.Biotech">StabilizeTransfusionCrisis</li>
+            </value>
+          </nomatch>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+</Patch>

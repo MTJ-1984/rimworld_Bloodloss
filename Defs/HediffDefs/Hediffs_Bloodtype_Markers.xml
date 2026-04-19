@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HediffDef>
+    <defName>BloodtypeMarker_O_Positive</defName>
+    <label>blood type: O+</label>
+    <description>Known blood type marker used for transfusion compatibility.</description>
+    <isBad>false</isBad>
+    <hediffClass>BloodtypeHardcore.Hediff_BloodtypeMarkerHidden</hediffClass>
+    <tendable>false</tendable>
+    <chronic>true</chronic>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>BloodtypeMarker_O_Negative</defName>
+    <label>blood type: O-</label>
+    <description>Known blood type marker used for transfusion compatibility.</description>
+    <isBad>false</isBad>
+    <hediffClass>BloodtypeHardcore.Hediff_BloodtypeMarkerHidden</hediffClass>
+    <tendable>false</tendable>
+    <chronic>true</chronic>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>BloodtypeMarker_A_Positive</defName>
+    <label>blood type: A+</label>
+    <description>Known blood type marker used for transfusion compatibility.</description>
+    <isBad>false</isBad>
+    <hediffClass>BloodtypeHardcore.Hediff_BloodtypeMarkerHidden</hediffClass>
+    <tendable>false</tendable>
+    <chronic>true</chronic>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>BloodtypeMarker_A_Negative</defName>
+    <label>blood type: A-</label>
+    <description>Known blood type marker used for transfusion compatibility.</description>
+    <isBad>false</isBad>
+    <hediffClass>BloodtypeHardcore.Hediff_BloodtypeMarkerHidden</hediffClass>
+    <tendable>false</tendable>
+    <chronic>true</chronic>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>BloodtypeMarker_B_Positive</defName>
+    <label>blood type: B+</label>
+    <description>Known blood type marker used for transfusion compatibility.</description>
+    <isBad>false</isBad>
+    <hediffClass>BloodtypeHardcore.Hediff_BloodtypeMarkerHidden</hediffClass>
+    <tendable>false</tendable>
+    <chronic>true</chronic>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>BloodtypeMarker_B_Negative</defName>
+    <label>blood type: B-</label>
+    <description>Known blood type marker used for transfusion compatibility.</description>
+    <isBad>false</isBad>
+    <hediffClass>BloodtypeHardcore.Hediff_BloodtypeMarkerHidden</hediffClass>
+    <tendable>false</tendable>
+    <chronic>true</chronic>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>BloodtypeMarker_AB_Positive</defName>
+    <label>blood type: AB+</label>
+    <description>Known blood type marker used for transfusion compatibility.</description>
+    <isBad>false</isBad>
+    <hediffClass>BloodtypeHardcore.Hediff_BloodtypeMarkerHidden</hediffClass>
+    <tendable>false</tendable>
+    <chronic>true</chronic>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>BloodtypeMarker_AB_Negative</defName>
+    <label>blood type: AB-</label>
+    <description>Known blood type marker used for transfusion compatibility.</description>
+    <isBad>false</isBad>
+    <hediffClass>BloodtypeHardcore.Hediff_BloodtypeMarkerHidden</hediffClass>
+    <tendable>false</tendable>
+    <chronic>true</chronic>
+  </HediffDef>
+
+</Defs>

@@ -1,0 +1,6 @@
+bin/
+obj/
+Assemblies/*.pdb
+*.user
+*.suo
+*.cache

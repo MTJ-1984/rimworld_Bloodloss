@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ResourceBase" Name="BloodPackBase" Abstract="True">
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <drawerType>MapMeshOnly</drawerType>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <stackLimit>10</stackLimit>
+    <tickerType>Rare</tickerType>
+    <alwaysHaulable>true</alwaysHaulable>
+    <pathCost>14</pathCost>
+    <graphicData>
+      <texPath>Things/Item/Resource/Medicine/MedicineIndustrial</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.85</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Mass>0.50</Mass>
+      <Flammability>0.7</Flammability>
+      <MarketValue>12</MarketValue>
+      <Beauty>0</Beauty>
+    </statBases>
+    <thingCategories>
+      <li>Foods</li>
+    </thingCategories>
+    <ingestible>
+      <foodType>Fluid</foodType>
+      <preferability>NeverForNutrition</preferability>
+      <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+      <nonDrugIngestibleWithoutFoodNeed>true</nonDrugIngestibleWithoutFoodNeed>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_OffsetHemogen">
+          <offset>0.2</offset>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="BloodtypeHardcore.CompProperties_BloodPackUsable" />
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BloodPackBase">
+    <defName>BloodPack_O_Positive</defName>
+    <label>blood pack (O+)</label>
+    <description>A stored donor blood pack labeled O+.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Medicine/BloodPack_O_Positive</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="BloodPackBase">
+    <defName>BloodPack_O_Negative</defName>
+    <label>blood pack (O-)</label>
+    <description>A stored donor blood pack labeled O-.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Medicine/BloodPack_O_Negative</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="BloodPackBase">
+    <defName>BloodPack_A_Positive</defName>
+    <label>blood pack (A+)</label>
+    <description>A stored donor blood pack labeled A+.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Medicine/BloodPack_A_Positive</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="BloodPackBase">
+    <defName>BloodPack_A_Negative</defName>
+    <label>blood pack (A-)</label>
+    <description>A stored donor blood pack labeled A-.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Medicine/BloodPack_A_Negative</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="BloodPackBase">
+    <defName>BloodPack_B_Positive</defName>
+    <label>blood pack (B+)</label>
+    <description>A stored donor blood pack labeled B+.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Medicine/BloodPack_B_Positive</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="BloodPackBase">
+    <defName>BloodPack_B_Negative</defName>
+    <label>blood pack (B-)</label>
+    <description>A stored donor blood pack labeled B-.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Medicine/BloodPack_B_Negative</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="BloodPackBase">
+    <defName>BloodPack_AB_Positive</defName>
+    <label>blood pack (AB+)</label>
+    <description>A stored donor blood pack labeled AB+.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Medicine/BloodPack_AB_Positive</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="BloodPackBase">
+    <defName>BloodPack_AB_Negative</defName>
+    <label>blood pack (AB-)</label>
+    <description>A stored donor blood pack labeled AB-.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Medicine/BloodPack_AB_Negative</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="BloodPackBase">
+    <defName>BloodPack_Unknown</defName>
+    <label>blood pack (?)</label>
+    <description>A donor blood pack with unknown typing.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Medicine/BloodPack_Unknown</texPath>
+    </graphicData>
+  </ThingDef>
+
+</Defs>

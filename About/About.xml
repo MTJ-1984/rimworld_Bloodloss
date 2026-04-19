@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Bloodtype Hardcore</name>
+  <author>MarkoJ + Codex</author>
+  <packageId>markoj.bloodtypehardcore</packageId>
+  <description>Adds pawn blood types and a hardcore blood management foundation for surgeries and trauma gameplay.</description>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+</ModMetaData>

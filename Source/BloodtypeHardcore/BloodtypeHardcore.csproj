@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <OutputType>Library</OutputType>
+    <AssemblyName>BloodtypeHardcore</AssemblyName>
+    <RootNamespace>BloodtypeHardcore</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <OutputPath>..\..\Assemblies\</OutputPath>
+    <RimWorldManagedDir Condition="'$(RimWorldManagedDir)' == ''">$(RIMWORLD_MANAGED_DIR)</RimWorldManagedDir>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(RimWorldManagedDir)' != ''">
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(RimWorldManagedDir)\Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(RimWorldManagedDir)\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="ValidateRimWorldManagedDir" BeforeTargets="ResolveReferences">
+    <Error Condition="'$(RimWorldManagedDir)' == ''" Text="RimWorldManagedDir is not set. Pass -p:RimWorldManagedDir=&quot;...\\RimWorldWin64_Data\\Managed&quot; or set the RIMWORLD_MANAGED_DIR environment variable." />
+    <Error Condition="!Exists('$(RimWorldManagedDir)\Assembly-CSharp.dll')" Text="Assembly-CSharp.dll was not found in '$(RimWorldManagedDir)'." />
+    <Error Condition="!Exists('$(RimWorldManagedDir)\UnityEngine.CoreModule.dll')" Text="UnityEngine.CoreModule.dll was not found in '$(RimWorldManagedDir)'." />
+  </Target>
+</Project>

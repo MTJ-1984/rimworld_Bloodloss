@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <GeneDef MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>BloodtypeHumanProfile</defName>
+    <label>human blood profile</label>
+    <labelShortAdj>human-blooded</labelShortAdj>
+    <description>Defines a baseline human-compatible blood profile, enabling standard ABO/Rh blood typing and typed blood pack compatibility.</description>
+    <iconPath>UI/Icons/Genes/Gene_StrongStomach</iconPath>
+    <displayCategory>Miscellaneous</displayCategory>
+    <displayOrderInCategory>90</displayOrderInCategory>
+    <biostatMet>0</biostatMet>
+    <biostatCpx>0</biostatCpx>
+    <modExtensions>
+      <li Class="BloodtypeHardcore.BloodtypeGeneExtension">
+        <overrideBloodFamily>true</overrideBloodFamily>
+        <bloodFamily>Human</bloodFamily>
+        <usesHumanBloodTyping>true</usesHumanBloodTyping>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>BloodtypeNoBloodProfile</defName>
+    <label>anhematologic profile</label>
+    <labelShortAdj>bloodless</labelShortAdj>
+    <description>Defines a bloodless physiology. Typed human blood extraction and transfusion operations are not applicable.</description>
+    <iconPath>UI/Icons/Genes/Gene_Nearsighted</iconPath>
+    <displayCategory>Miscellaneous</displayCategory>
+    <displayOrderInCategory>91</displayOrderInCategory>
+    <biostatMet>0</biostatMet>
+    <biostatCpx>0</biostatCpx>
+    <modExtensions>
+      <li Class="BloodtypeHardcore.BloodtypeGeneExtension">
+        <overrideBloodFamily>true</overrideBloodFamily>
+        <bloodFamily>NoBlood</bloodFamily>
+        <usesHumanBloodTyping>false</usesHumanBloodTyping>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+</Defs>

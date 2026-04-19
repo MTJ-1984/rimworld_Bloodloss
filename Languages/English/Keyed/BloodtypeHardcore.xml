@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <BloodtypeHardcore.Settings.Section.Presets>Presets</BloodtypeHardcore.Settings.Section.Presets>
+  <BloodtypeHardcore.Settings.CurrentPreset>Current preset: {0}</BloodtypeHardcore.Settings.CurrentPreset>
+  <BloodtypeHardcore.Settings.Preset.Easy>Apply Easy Preset</BloodtypeHardcore.Settings.Preset.Easy>
+  <BloodtypeHardcore.Settings.Preset.Normal>Apply Normal Preset</BloodtypeHardcore.Settings.Preset.Normal>
+  <BloodtypeHardcore.Settings.Preset.Hard>Apply Hard Preset</BloodtypeHardcore.Settings.Preset.Hard>
+  <BloodtypeHardcore.Settings.Preset.UltraBrutal>Apply Ultra Brutal Preset</BloodtypeHardcore.Settings.Preset.UltraBrutal>
+  <BloodtypeHardcore.Settings.BloodRecoveryMultiplier>Blood recovery speed multiplier: {0}</BloodtypeHardcore.Settings.BloodRecoveryMultiplier>
+  <BloodtypeHardcore.Settings.ReactionSeverityMultiplier>Transfusion reaction severity multiplier: {0}</BloodtypeHardcore.Settings.ReactionSeverityMultiplier>
+  <BloodtypeHardcore.Settings.AllowCompatibleNonIdentical>Allow compatible (non-identical) transfusions</BloodtypeHardcore.Settings.AllowCompatibleNonIdentical>
+  <BloodtypeHardcore.Settings.AllowCompatibleNonIdentical.Desc>If disabled, only exact blood type matches are accepted as safe transfusions.</BloodtypeHardcore.Settings.AllowCompatibleNonIdentical.Desc>
+  <BloodtypeHardcore.Settings.Section.Global>Global Multipliers</BloodtypeHardcore.Settings.Section.Global>
+  <BloodtypeHardcore.Settings.Section.Extraction>Extraction Balance</BloodtypeHardcore.Settings.Section.Extraction>
+  <BloodtypeHardcore.Settings.Section.Transfusion>Transfusion Balance</BloodtypeHardcore.Settings.Section.Transfusion>
+  <BloodtypeHardcore.Settings.ExtractBloodLossAdded>Blood loss added on extraction: {0}</BloodtypeHardcore.Settings.ExtractBloodLossAdded>
+  <BloodtypeHardcore.Settings.ExtractMaxAllowedBloodLoss>Extraction blocked above blood loss: {0}</BloodtypeHardcore.Settings.ExtractMaxAllowedBloodLoss>
+  <BloodtypeHardcore.Settings.ExactMatchBloodLossRecovery>Exact-match transfusion blood loss recovery: {0}</BloodtypeHardcore.Settings.ExactMatchBloodLossRecovery>
+  <BloodtypeHardcore.Settings.CompatibleBloodLossRecovery>Compatible transfusion blood loss recovery: {0}</BloodtypeHardcore.Settings.CompatibleBloodLossRecovery>
+  <BloodtypeHardcore.Settings.IncompatibleBloodLossRecovery>Incompatible transfusion blood loss recovery: {0}</BloodtypeHardcore.Settings.IncompatibleBloodLossRecovery>
+  <BloodtypeHardcore.Settings.CompatibleReactionSeverity>Compatible transfusion base reaction severity: {0}</BloodtypeHardcore.Settings.CompatibleReactionSeverity>
+  <BloodtypeHardcore.Settings.IncompatibleReactionSeverity>Incompatible transfusion base reaction severity: {0}</BloodtypeHardcore.Settings.IncompatibleReactionSeverity>
+  <BloodtypeHardcore.Settings.UltraBrutalCriticalMode>Ultra brutal critical mode</BloodtypeHardcore.Settings.UltraBrutalCriticalMode>
+  <BloodtypeHardcore.Settings.UltraBrutalCriticalMode.Desc>When enabled, any non-exact typed transfusion triggers a 6-hour lethal crisis. Use the stabilize transfusion crisis operation with medicine to attempt rescue.</BloodtypeHardcore.Settings.UltraBrutalCriticalMode.Desc>
+  <BloodtypeHardcore.Settings.UltraBrutalRescueScale>Ultra brutal rescue scale (applied after surgery success factors): {0}</BloodtypeHardcore.Settings.UltraBrutalRescueScale>
+  <BloodtypeHardcore.Extract.NotEnoughBlood>{PAWN_nameDef} does not have enough blood to safely extract a blood pack.</BloodtypeHardcore.Extract.NotEnoughBlood>
+  <BloodtypeHardcore.Extract.Success>Extracted a {0} blood pack from {PAWN_nameDef}.</BloodtypeHardcore.Extract.Success>
+  <BloodtypeHardcore.Transfusion.MissingPack>No compatible blood pack was found for this transfusion bill on {PAWN_nameDef}.</BloodtypeHardcore.Transfusion.MissingPack>
+  <BloodtypeHardcore.Transfusion.ExactMatch>Transfusion completed for {PAWN_nameDef} using exact-match blood ({0}).</BloodtypeHardcore.Transfusion.ExactMatch>
+  <BloodtypeHardcore.Transfusion.Compatible>Transfusion completed for {PAWN_nameDef} using compatible blood ({0} to {1}). Reaction risk increased.</BloodtypeHardcore.Transfusion.Compatible>
+  <BloodtypeHardcore.Transfusion.Incompatible>Severe transfusion reaction on {PAWN_nameDef}: incompatible blood used ({0} to {1}).</BloodtypeHardcore.Transfusion.Incompatible>
+  <BloodtypeHardcore.Transfusion.UltraBrutal.CrisisStarted>{PAWN_nameDef} entered catastrophic transfusion crisis ({0} to {1}). Perform emergency stabilization quickly or death is imminent.</BloodtypeHardcore.Transfusion.UltraBrutal.CrisisStarted>
+  <BloodtypeHardcore.Transfusion.UltraBrutal.Rescued>{PAWN_nameDef} survived catastrophic transfusion shock. Emergency rescue succeeded at {0}% effective chance; patient entered prolonged post-crisis recovery.</BloodtypeHardcore.Transfusion.UltraBrutal.Rescued>
+  <BloodtypeHardcore.Transfusion.UltraBrutal.PartialStabilization>Emergency stabilization partially succeeded for {PAWN_nameDef} ({0}% effective chance), but acute crisis remains active.</BloodtypeHardcore.Transfusion.UltraBrutal.PartialStabilization>
+  <BloodtypeHardcore.Transfusion.UltraBrutal.FailedRescue>Emergency rescue failed for {PAWN_nameDef} ({0}% effective chance). Crisis persists.</BloodtypeHardcore.Transfusion.UltraBrutal.FailedRescue>
+  <BloodtypeHardcore.Transfusion.UltraBrutal.NoActiveCrisis>{PAWN_nameDef} has no active transfusion crisis to stabilize.</BloodtypeHardcore.Transfusion.UltraBrutal.NoActiveCrisis>
+  <BloodtypeHardcore.Transfusion.UltraBrutal.RequiresMedicine>Emergency stabilization for {PAWN_nameDef} requires medicine.</BloodtypeHardcore.Transfusion.UltraBrutal.RequiresMedicine>
+  <BloodtypeHardcore.Transfusion.CrisisNeedsStabilization>{PAWN_nameDef} is in catastrophic transfusion crisis. Use stabilize transfusion crisis with medicine.</BloodtypeHardcore.Transfusion.CrisisNeedsStabilization>
+  <BloodtypeHardcore.BloodPack.Use.Label>Administer blood pack</BloodtypeHardcore.BloodPack.Use.Label>
+  <BloodtypeHardcore.BloodPack.Use.Desc>Force-administer this specific blood pack to a selected pawn.</BloodtypeHardcore.BloodPack.Use.Desc>
+  <BloodtypeHardcore.BloodPack.Use.Menu>Inject blood pack into...</BloodtypeHardcore.BloodPack.Use.Menu>
+  <BloodtypeHardcore.BloodPack.Use.NoPath>Cannot use this blood pack right now: no path or reservation access.</BloodtypeHardcore.BloodPack.Use.NoPath>
+  <BloodtypeHardcore.BloodPack.Use.CannotReachTarget>Cannot reach {PAWN_nameDef} to administer this blood pack.</BloodtypeHardcore.BloodPack.Use.CannotReachTarget>
+  <BloodtypeHardcore.BloodPack.Use.InvalidType>This blood pack type is not supported by the current blood typing system.</BloodtypeHardcore.BloodPack.Use.InvalidType>
+  <BloodtypeHardcore.BloodPack.Use.CrisisBlocked>{PAWN_nameDef} is in catastrophic transfusion crisis. Use stabilize transfusion crisis with medicine.</BloodtypeHardcore.BloodPack.Use.CrisisBlocked>
+  <BloodtypeHardcore.General.NoBlood>{PAWN_nameDef} has no transfusable blood.</BloodtypeHardcore.General.NoBlood>
+  <BloodtypeHardcore.General.UnsupportedBloodFamily>{PAWN_nameDef}'s blood family is not supported by human typed blood packs.</BloodtypeHardcore.General.UnsupportedBloodFamily>
+</LanguageData>
